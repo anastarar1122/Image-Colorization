@@ -1,0 +1,29 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+
+# Environment variables file
+.env
+imgcolor_env
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+
+# Model files (machine learning)
+*.h5
+*.tflite
+*.onnx
+
+# MLflow runs
+mlruns/
+
+# Log files
+*.log
+
+# NumPy data files
+*.npy
+
+# Dataset Files
+
+data/
