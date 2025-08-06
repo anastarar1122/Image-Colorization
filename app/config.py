@@ -39,12 +39,24 @@ class Settings(BaseSettings):
     SAVE_OUTPUT_PATH: str = 'F:/.vscode/Projects/p4/saves/output'
 
     MLFLOW_URI: str = 'http://127.0.0.1:5000'
-    MLFLOW_EXPERIMENTAL_NAME:str = 'image_colorizor'
     MLFLOW_ARTIFACT_DIR: str = 'F:/.vscode/Projects/p4/mlflow/artifacts'
 
     PORT: int = 8000
     HOST: str = '0.0.0.0'
-    JWT_SECRET: str = 'default'
+
+    JWT_ALGORITHM: str = 'HS256'
+    JWT_ACCESS_EXPIRY: int = 30
+    JWT_SECRET_KEY: str = 'default'
+    JWT_REFRESH_KEY:str = 'default'
+    JWT_REFRESH_EXPIRY: int = 1440
+
+    DB_PATH:str = 'F:/.vscode/Projects/p4/data'
+    DB_HOST:str = 'localhost'
+    DB_USER:str = 'postgres'
+    DB_PASSWORD:str = '6133'
+    DB_NAME:str = 'Image'
+    DB_PORT:str = '5432'
+
 
     model_config = {
         'env_file': '.env'
