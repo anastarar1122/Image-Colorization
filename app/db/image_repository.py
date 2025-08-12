@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import List
 
 from config import config
-from models.orm_models import Image
+from db.models import Image
 from logger import get_logger
 from utils.image_utils import ImageUtils
 

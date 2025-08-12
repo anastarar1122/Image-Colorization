@@ -12,6 +12,7 @@ db_user = config.DB_USER
 db_host = config.DB_HOST
 db_port = config.DB_PORT
 db_name = config.DB_NAME
+
 db_url = f'{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}'
 
 engine = create_engine(db_url)
@@ -19,7 +20,7 @@ SessionLocal = sessionmaker(bind=engine,autoflush=False)
 Base = declarative_base()
 
 def init_db():
-    from models.orm_models import Post,User,Image
+    from db.models import Post,User,Image
     logger.info("Initializing the database")
     Base.metadata.create_all(bind=engine)
     logger.info("All Tables Created if not Exists")
